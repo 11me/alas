@@ -6,7 +6,7 @@ V,bluez, daemon for BT protocol
 V,bluez-utils
 V,chromium, browser
 V,cups, printing system
-V,cups-pdf
+V,cups-pdf,
 V,dunst, sends notification
 V,figlet, makes large letters in terminal
 V,firefox, browser
