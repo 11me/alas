@@ -3,7 +3,7 @@ V,alsa-utils, utils for alsa
 V,arandr, UI for xrandr for setup a monitor
 V,blueman, UI for bluetooth (BT) manager
 V,bluez, daemon for BT protocol
-V,bluez-utils
+V,bluez-utils,
 V,chromium, browser
 V,cups, printing system
 V,cups-pdf,
