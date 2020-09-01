@@ -14,7 +14,7 @@ V,fzf, fuzzy finder
 V,gimp, GIMP
 V,gzip, GNU compression
 V,hplip, drivers for HP
-A,hplip-plugin
+A,hplip-plugin,
 V,htop, process viewer
 V,ipython, interactive python shell
 A,lf, file manager
