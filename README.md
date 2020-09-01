@@ -1,0 +1,2 @@
+# alas
+ArchLinux Autorising Script
