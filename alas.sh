@@ -15,6 +15,7 @@ readonly dotfiles="dotfiles" # dotfiles repo name
 readonly dwm_git="https://github.com/lukesmithxyz/dwm"
 readonly dmenu_git="https://github.com/11me/dmenu"
 readonly st_git="https://github.com/11me/st"
+readonly slock_git="https://github.com/11me/slock-1.4.git"
 readonly script_dir=$(pwd)
 
 # Just to be polite
@@ -225,6 +226,7 @@ yes | sudo -u "$username" "$aurhelper" -S libxft-bgra-git
 install_from_git "$dwm_git" dwm
 install_from_git "$dmenu_git" dmenu
 install_from_git "$st_git" st
+install_from_git "$slock_git" "slock-1.4"
 
 chsh -s /bin/zsh "$username" > /dev/null 2>&1
 systembeep
