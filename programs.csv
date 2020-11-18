@@ -1,6 +1,7 @@
 TAG, NAME, DESCRIPTION
 V,alsa-utils, utils for alsa
 V,arandr, UI for xrandr for setup a monitor
+V,acpi, needed for batteries script
 V,blueman, UI for bluetooth (BT) manager
 V,bluez, daemon for BT protocol
 V,bluez-utils,
@@ -17,6 +18,8 @@ V,hplip, drivers for HP
 A,hplip-plugin,
 V,htop, process viewer
 V,ipython, interactive python shell
+V,i3-wm, i3 window manager
+V,i3blocks, statusbar for i3
 A,lf, file manager
 V,libreoffice-fresh, office
 V,lxappearance, theme manager
@@ -40,7 +43,8 @@ V,ttf-joypixels,
 V,ttf-linux-libertine,
 V,pavucontrol, UI audiocontrol for pulse
 V,picom, composite manager
-V,pulseaudio,
+V,pulseaudio, pulseaudio
+V,pulseaudio-alsa, for pulseaudio to manage ALSA
 V,python-pywal, generates colors for X
 V,qbittorrent, torrent UI
 V,ranger, file manager wirtten in python
