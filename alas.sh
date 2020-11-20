@@ -147,7 +147,6 @@ maininstall() {
 
 }
 
-
 # Create symlinks from dotfiles to user's home folder
 make_symlinks() {
 
@@ -159,6 +158,16 @@ make_symlinks() {
      ln -sf "$dotfiles/.xinitrc" . && chown -R "$username:$group" ".xinitrc"
      ln -sf "$dotfiles/.xprofile" . && chown -R "$username:$group" ".xprofile"
      ln -sf "$dotfiles/.config/zsh/.zshrc" . && chown -R "$username:$group" ".zshrc"
+
+}
+
+# Create working directories
+create_dirs() {
+
+    mkdir -p "/home/$username/dox"
+    mkdir -p "/home/$username/dwns"
+    mkdir -p "/home/$username/pix"
+    mkdir -p "/home/$username/dox/{projects,personal,usb-mnt}"
 
 }
 
@@ -228,4 +237,5 @@ install_from_git "$slock_git" "slock-1.4"
 
 chsh -s /bin/zsh "$username" > /dev/null 2>&1
 systembeep
+create_dirs
 finally
