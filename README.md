@@ -10,3 +10,7 @@ It installs all programs I use located in file programs.csv, additionally it ins
   - Edit global variables at the beginnig of the script for your personal needs
   - And run the script `$ ./alas.sh`
   - Follow the instructions
+
+### Todo
+- [] ArchLinux autoinstaller
+- [] Add backlight rules instead of xorg-backlight
