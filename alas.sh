@@ -201,7 +201,7 @@ systembeep() {
 brightness_rules() {
 
     yes | pacman -S --needed --confirm "acpilight" >/dev/null 2>&1;
-    curl -sO -T /etc/udev/rules.d/ $backlight_rules
+    curl -so /etc/udev/rules.d/90-backlight.rules $backlight_rules
 
 }
 
