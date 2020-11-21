@@ -15,6 +15,9 @@ readonly dotfiles="dotfiles" # dotfiles repo name
 readonly dmenu_git="https://github.com/11me/dmenu"
 readonly st_git="https://github.com/11me/st"
 readonly slock_git="https://github.com/11me/slock-1.4.git"
+
+# DO NOT EDIT THIS
+readonly backlight_rules="https://gitlab.com/wavexx/acpilight/-/blob/master/90-backlight.rules"
 readonly script_dir=$(pwd)
 
 # Just to be polite
@@ -194,6 +197,14 @@ systembeep() {
 
 }
 
+# Setup the brightness control
+brightness_rules() {
+
+    yes | pacman -S --needed --confirm "acpilight" >/dev/null 2>&1;
+    curl -sO -T /etc/udev/rules.d/ $backlight_rules
+
+}
+
 # Tell the user about the end of installation
 finally() {
 
@@ -238,4 +249,5 @@ install_from_git "$slock_git" "slock-1.4"
 chsh -s /bin/zsh "$username" > /dev/null 2>&1
 systembeep
 create_dirs
+brightness_rules
 finally
