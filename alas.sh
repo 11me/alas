@@ -17,7 +17,7 @@ readonly st_git="https://github.com/11me/st"
 readonly slock_git="https://github.com/11me/slock-1.4.git"
 
 # DO NOT EDIT THIS
-readonly backlight_rules="https://gitlab.com/wavexx/acpilight/-/blob/master/90-backlight.rules"
+readonly backlight_rules="https://gitlab.com/wavexx/acpilight/-/raw/master/90-backlight.rules"
 readonly script_dir=$(pwd)
 
 # Just to be polite
