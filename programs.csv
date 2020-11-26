@@ -46,7 +46,6 @@ V,picom, composite manager
 V,pulseaudio, pulseaudio
 V,pulseaudio-alsa, for pulseaudio to manage ALSA
 V,python-pywal, generates colors for X
-V,qbittorrent, torrent UI
 V,ranger, file manager wirtten in python
 V,rsync, great sync client
 V,sxhkd, simple X htokey daemon
