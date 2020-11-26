@@ -39,7 +39,7 @@ install_loop() {
     i=0
     while IFS=, read -r tag package comment; do
         i=$((i+1))
-        printf "Installing $i of $total_programs\n"
+        echo "Installing $i of $total_programs"
         case "$tag" in
             "A") aurinstall "$package" "$comment";;
             "V") maininstall "$package" "$comment";;
@@ -52,12 +52,12 @@ install_loop() {
 # Get and validate a username
 # params: username
 get_username() {
-    printf "Please enter the following for a new user\n"
+    echo "Please enter the following for a new user"
     printf "Username: "
-    read username
+    read -r username
     while ! echo "$username" | grep "^[a-z_][a-z0-9_-]*$" >/dev/null 2>&1; do
        printf "Username is not valid, please enter it again: "
-       read username
+       read -r username
 	done
 }
 
@@ -66,24 +66,23 @@ get_username() {
 get_password() {
     stty -echo
     printf "Password: "
-    read pass1
+    read -r pass1
     printf "\n"
     printf "Retype password: "
-    read pass2
+    read -r pass2
     printf "\n"
 
     while ! [ "$pass1" = "$pass2" ]; do
         unset pass2
         printf "Passwords do not match. Enter passwords again.\n"
         printf "Password: "
-        read pass1
+        read -r pass1
         printf "\n"
         printf "Retype password: "
-        read pass2
+        read -r pass2
     done;
 
     stty echo
-    password=$pass1
     printf "\n"
 }
 
@@ -91,11 +90,11 @@ get_password() {
 # params: username
 create_user(){
 
-    printf "Creating a user - $username...\n"
+    echo "Creating a user - $username..."
     useradd -m -G wheel "$username"
     echo "$username:$pass1" | chpasswd
     unset pass1 pass2
-    printf "$username successfully created!\n"
+    echo "$username successfully created!"
 
 }
 
@@ -111,9 +110,9 @@ change_sudoers() {
 copy_dotfiles() {
 
     upath="/home/$username"
-    cd "$upath"
-    printf "Navigating to $upath\n"
-    printf "Pulling dotfiles from github...\n"
+    cd "$upath" || exit
+    echo "Navigating to $upath"
+    echo "Pulling dotfiles from github..."
     git clone "$repo_git" > /dev/null 2>&1
     chown -R "$username:$group" "$dotfiles"
 
@@ -123,14 +122,14 @@ copy_dotfiles() {
 # params: helper_name (default is yay)
 aurhelper_install() {
 
-    printf "Downloading $1...\n"
+    echo "Downloading $1..."
 	rm -rf /tmp/"$1"*
-    cd "/tmp"
-	curl -sO "https://aur.archlinux.org/cgit/aur.git/snapshot/"$1".tar.gz" &&
+    cd "/tmp" || exit
+	curl -sO "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" &&
 	sudo -u "$username" tar -xvf "$1".tar.gz >/dev/null 2>&1 &&
 	cd "/tmp/$1" &&
 	sudo -u "$username" makepkg --noconfirm -si >/dev/null 2>&1
-    printf "$1 is installed\n"
+    echo "$1 is installed"
 
 }
 
@@ -153,8 +152,8 @@ maininstall() {
 # Create symlinks from dotfiles to user's home folder
 make_symlinks() {
 
-     printf "Almost done! Creating symlinks from dotfiles...\n"
-     cd "/home/$username"
+     echo "Almost done! Creating symlinks from dotfiles..."
+     cd "/home/$username" || exit
      ln -sf "$dotfiles/.config" . && chown -R "$username:$group" ".config"
      ln -sf "$dotfiles/.local" . && chown -R "$username:$group" ".local"
      ln -sf "$dotfiles/.zprofile" ".profile" && chown -R "$username:$group" ".profile"
@@ -168,9 +167,11 @@ make_symlinks() {
 create_dirs() {
 
     mkdir -p "/home/$username/dox"
+    mkdir -p "/home/$username/dox/projects"
+    mkdir -p "/home/$username/dox/personal"
+    mkdir -p "/home/$username/dox/usb-mnt"
     mkdir -p "/home/$username/dwns"
     mkdir -p "/home/$username/pix"
-    mkdir -p "/home/$username/dox/{projects,personal,usb-mnt}"
 
 }
 
@@ -178,14 +179,14 @@ create_dirs() {
 # params: link, folder_name
 install_from_git() {
 
-    cd "/home/$username/.local/share"
-    printf "Cloning $2...\n"
+    cd "/home/$username/.local/share" || exit
+    echo "Cloning $2..."
     git clone "$1" > /dev/null 2>&1
     chown -R "$username:$group" "$2"
-    printf "Installing $2...\n"
-    cd "$2"
+    echo "Installing $2..."
+    cd "$2" || exit
     make install > /dev/null 2>&1
-    printf "$2 installed\n"
+    echo "$2 installed"
 
 }
 
