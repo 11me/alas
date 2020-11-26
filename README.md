@@ -12,5 +12,5 @@ It installs all programs I use located in file programs.csv, additionally it ins
   - Follow the instructions
 
 ### Todo
-- [ ] ArchLinux autoinstaller
-- [ ] Add backlight rules instead of xorg-backlight
+- [x] ArchLinux autoinstaller
+- [x] Add backlight rules instead of xorg-backlight
