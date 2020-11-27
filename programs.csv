@@ -42,6 +42,7 @@ V,ttf-jetbrains-mono,
 V,ttf-joypixels,
 V,ttf-linux-libertine,
 V,pavucontrol, UI audiocontrol for pulse
+V,pass, password manager
 V,picom, composite manager
 V,pulseaudio, pulseaudio
 V,pulseaudio-alsa, for pulseaudio to manage ALSA
