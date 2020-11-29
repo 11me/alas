@@ -18,7 +18,7 @@ V,hplip, drivers for HP
 A,hplip-plugin,
 V,htop, process viewer
 V,ipython, interactive python shell
-V,i3-wm, i3 window manager
+V,i3-gaps, i3-gaps is fork of i3wm with more features
 V,i3blocks, statusbar for i3
 A,lf, file manager
 V,libreoffice-fresh, office
