@@ -206,6 +206,21 @@ brightness_rules() {
 
 }
 
+# Make pacman and yay colorful and add eye candy on the progress bar
+add_colors() {
+
+    grep -q "^Color" /etc/pacman.conf || sed -i "s/^#Color$/Color/" /etc/pacman.conf
+    grep -q "ILoveCandy" /etc/pacman.conf || sed -i "/#VerbosePkgLists/a ILoveCandy" /etc/pacman.conf
+
+}
+
+# Use all cores for compilation
+enable_all_cores() {
+
+    sed -i "s/-j2/-j$(nproc)/;s/^#MAKEFLAGS/MAKEFLAGS/" /etc/makepkg.conf
+
+}
+
 # Tell the user about the end of installation
 finally() {
 
@@ -251,4 +266,6 @@ chsh -s /bin/zsh "$username" > /dev/null 2>&1
 systembeep
 create_dirs
 brightness_rules
+add_colors
+enable_all_cores
 finally
