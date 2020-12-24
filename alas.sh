@@ -12,6 +12,8 @@ readonly group="wheel"
 readonly aurhelper="yay"
 readonly repo_git="https://github.com/11me/dotfiles"
 readonly dotfiles="dotfiles" # dotfiles repo name
+readonly dwm_git="https://github.com/11me/dwm"
+readonly dwmblocks_git="https://github.com/11me/dwmblocks"
 readonly dmenu_git="https://github.com/11me/dmenu"
 readonly st_git="https://github.com/11me/st"
 readonly slock_git="https://github.com/11me/slock-1.4.git"
@@ -258,6 +260,8 @@ install_loop
 yes | sudo -u "$username" "$aurhelper" -S libxft-bgra-git
 
 # Install software from users git repository
+install_from_git "$dwm_git" dwm
+install_from_git "$dwmblocks_git" dwmblocks
 install_from_git "$dmenu_git" dmenu
 install_from_git "$st_git" st
 install_from_git "$slock_git" "slock-1.4"
