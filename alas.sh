@@ -168,12 +168,12 @@ make_symlinks() {
 # Create working directories
 create_dirs() {
 
-    mkdir -p "/home/$username/dox"
-    mkdir -p "/home/$username/dox/projects"
-    mkdir -p "/home/$username/dox/personal"
-    mkdir -p "/home/$username/dox/usb-mnt"
-    mkdir -p "/home/$username/dwns"
-    mkdir -p "/home/$username/pix"
+    mkdir -p "/home/$username/dox" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/projects" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/personal" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/usb-mnt" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dwns" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/pix" && chown -R "$username:$group" "$_"
 
 }
 
@@ -277,5 +277,4 @@ create_dirs
 brightness_rules
 add_colors
 enable_all_cores
-install_fnm
 finally
