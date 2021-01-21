@@ -2,6 +2,7 @@ TAG, NAME, DESCRIPTION
 V,alsa-utils, utils for alsa
 V,arandr, UI for xrandr for setup a monitor
 V,acpi, needed for batteries script
+V,alacritty, cool terminal
 V,blueman, UI for bluetooth (BT) manager
 V,bluez, daemon for BT protocol
 V,bluez-utils,

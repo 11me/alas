@@ -223,6 +223,11 @@ enable_all_cores() {
 
 }
 
+# Install fast node package manager
+install_fnm() {
+    sudo -u "$username" curl -fsSL "https://fnm.vercel.app/install" | bash
+}
+
 # Tell the user about the end of installation
 finally() {
 
@@ -272,4 +277,5 @@ create_dirs
 brightness_rules
 add_colors
 enable_all_cores
+install_fnm
 finally
