@@ -12,7 +12,7 @@ echo " "
 printf "Enter a hostname: "
 read -r host
 
-printf "Enter a lowercase letter of your block device: a,b,c,d: "
+printf "Enter your block device \"sda, sdb or etc\": "
 read -r block
 
 printf "Enter size of swap in Gb: "
@@ -21,7 +21,7 @@ read -r swp
 printf "Enter size of root in Gb: "
 read -r root
 
-cat <<EOF | fdisk "/dev/sd${block}"
+cat <<EOF | fdisk "/dev/${block}"
 g
 n
 
@@ -46,17 +46,17 @@ w
 EOF
 partprobe
 
-mkswap "/dev/sd${block}2"
-swapon "/dev/sd${block}2"
-yes | mkfs.fat -F32 "/dev/sd${block}1"
-yes | mkfs.ext4 "/dev/sd${block}3"
-yes | mkfs.ext4 "/dev/sd${block}4"
+mkswap "/dev/${block}2"
+swapon "/dev/${block}2"
+yes | mkfs.fat -F32 "/dev/${block}1"
+yes | mkfs.ext4 "/dev/${block}3"
+yes | mkfs.ext4 "/dev/${block}4"
 
-mount "/dev/sd${block}3" /mnt
+mount "/dev/${block}3" /mnt
 mkdir -p /mnt/efi
 mkdir -p /mnt/home
-mount "/dev/sd${block}1" /mnt/efi
-mount "/dev/sd${block}4" /mnt/home
+mount "/dev/${block}1" /mnt/efi
+mount "/dev/${block}4" /mnt/home
 
 pacstrap /mnt base base-devel linux linux-firmware man-db man-pages neovim
 
