@@ -168,12 +168,12 @@ make_symlinks() {
 # Create working directories
 create_dirs() {
 
-    mkdir -p "/home/$username/dox"
-    mkdir -p "/home/$username/dox/projects"
-    mkdir -p "/home/$username/dox/personal"
-    mkdir -p "/home/$username/dox/usb-mnt"
-    mkdir -p "/home/$username/dwns"
-    mkdir -p "/home/$username/pix"
+    mkdir -p "/home/$username/dox" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/projects" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/personal" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/usb-mnt" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dwns" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/pix" && chown -R "$username:$group" "$_"
 
 }
 
@@ -221,6 +221,11 @@ enable_all_cores() {
 
     sed -i "s/-j2/-j$(nproc)/;s/^#MAKEFLAGS/MAKEFLAGS/" /etc/makepkg.conf
 
+}
+
+# Install fast node package manager
+install_fnm() {
+    sudo -u "$username" curl -fsSL "https://fnm.vercel.app/install" | bash
 }
 
 # Tell the user about the end of installation
