@@ -174,6 +174,7 @@ create_dirs() {
     mkdir -p "/home/$username/dox/usb-mnt" && chown -R "$username:$group" "$_"
     mkdir -p "/home/$username/dwns" && chown -R "$username:$group" "$_"
     mkdir -p "/home/$username/pix" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/music" && chown -R "$username:$group" "$_"
 
 }
 
