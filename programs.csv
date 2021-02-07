@@ -20,7 +20,9 @@ V,hplip, drivers for HP
 A,hplip-plugin,
 V,htop, process viewer
 V,ipython, interactive python shell
+V,isync, sync email
 A,lf, file manager
+V,lynx, terminal browser
 V,libreoffice-fresh, office
 A,libra-dark-gtk-theme, nice theme for eyes
 V,lxappearance, theme manager
@@ -30,6 +32,7 @@ V,maim, screenshot tool
 V,mpc, music player
 V,mpd, music player daemon
 V,mpv, media player
+V,msmtp, mail sender
 V,ncmpcpp, terminal music player
 V,neofetch, sys info tool
 V,neovim, powerful text editor
