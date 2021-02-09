@@ -67,6 +67,7 @@ V,unrar,
 V,unzip,
 V,unclutter, hides mouse
 V,w3m, terminal web-browser
+V,wmname, sets the root window name for running Java programs
 V,wget,
 V,sane, program for scanner
 V,xclip, clipboard tool
