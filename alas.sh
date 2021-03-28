@@ -125,12 +125,12 @@ copy_dotfiles() {
 aurhelper_install() {
 
     echo "Downloading $1..."
-	rm -rf /tmp/"$1"*
+    rm -rf /tmp/"$1"*
     cd "/tmp" || exit
-	curl -sO "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" &&
-	sudo -u "$username" tar -xvf "$1".tar.gz >/dev/null 2>&1 &&
-	cd "/tmp/$1" &&
-	sudo -u "$username" makepkg --noconfirm -si >/dev/null 2>&1
+    curl -sO "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" &&
+    sudo -u "$username" tar -xvf "$1".tar.gz >/dev/null 2>&1 &&
+    cd "/tmp/$1" &&
+    sudo -u "$username" makepkg --noconfirm -si >/dev/null 2>&1
     echo "$1 is installed"
 
 }
@@ -162,6 +162,7 @@ make_symlinks() {
      ln -sf "$dotfiles/.xinitrc" . && chown -R "$username:$group" ".xinitrc"
      ln -sf "$dotfiles/.xprofile" . && chown -R "$username:$group" ".xprofile"
      ln -sf "$dotfiles/.config/zsh/.zshrc" . && chown -R "$username:$group" ".zshrc"
+     ln -sf "$dotfiles/.config/.tmux.conf" . && chown -R "$username:$group" ".tmux.conf"
 
 }
 
