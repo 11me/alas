@@ -11,6 +11,7 @@ V,chromium, browser
 V,cups, printing system
 V,cups-pdf,
 V,dunst, sends notification
+V,dosfstools, for making FAT fs
 V,figlet, makes large letters in terminal
 V,firefox, browser
 V,fzf, fuzzy finder
@@ -42,6 +43,7 @@ V,nodejs, NodeJs
 V,npm, NodeJs package manager
 V,noto-fonts, fonts
 V,noto-fonts-emoji, fonts
+V,ntfs-3g, ntfs filesystem
 V,ttf-dejavu,
 V,ttf-font-awesome,
 V,ttf-inconsolata,
