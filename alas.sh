@@ -44,7 +44,7 @@ install_loop() {
         echo "Installing $i of $total_programs"
         case "$tag" in
             "A") aurinstall "$package" "$comment";;
-            "V") maininstall "$package" "$comment";;
+            "M") maininstall "$package" "$comment";;
         esac
     done < "$script_dir/programs.csv"
 

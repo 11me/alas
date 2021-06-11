@@ -1,84 +1,84 @@
 TAG, NAME, DESCRIPTION
-V,alsa-utils, utils for alsa
-V,arandr, UI for xrandr for setup a monitor
-V,acpi, needed for batteries script
-V,alacritty, cool terminal
+M,alsa-utils, utils for alsa
+M,arandr, UI for xrandr for setup a monitor
+M,acpi, needed for batteries script
+M,alacritty, cool terminal
 A,artix-dark-theme-git, nice dark gtk2/3 theme
-V,blueman, UI for bluetooth (BT) manager
-V,bluez, daemon for BT protocol
-V,bluez-utils,
-V,chromium, browser
-V,cups, printing system
-V,cups-pdf,
-V,dunst, sends notification
-V,dosfstools, for making FAT fs
-V,figlet, makes large letters in terminal
-V,firefox, browser
-V,fzf, fuzzy finder
-V,gimp, GIMP
-V,gzip, GNU compression
-V,hplip, drivers for HP
+M,blueman, UI for bluetooth (BT) manager
+M,bluez, daemon for BT protocol
+M,bluez-utils,
+M,chromium, browser
+M,cups, printing system
+M,cups-pdf,
+M,dunst, sends notification
+M,dosfstools, for making FAT fs
+M,figlet, makes large letters in terminal
+M,firefox, browser
+M,fzf, fuzzy finder
+M,gimp, GIMP
+M,gzip, GNU compression
+M,hplip, drivers for HP
 A,hplip-plugin,
-V,htop, process viewer
-V,ipython, interactive python shell
-V,isync, sync email
+M,htop, process viewer
+M,ipython, interactive python shell
+M,isync, sync email
 A,lf, file manager
-V,lynx, terminal browser
-V,libreoffice-fresh, office
+M,lynx, terminal browser
+M,libreoffice-fresh, office
 A,libra-dark-gtk-theme, nice theme for eyes
-V,lxappearance, theme manager
-V,lxsession, tool for polkit
+M,lxappearance, theme manager
+M,lxsession, tool for polkit
 A,librewolf-bin, private browser
-V,maim, screenshot tool
-V,mpc, music player
-V,mpd, music player daemon
-V,mpv, media player
-V,msmtp, mail sender
-V,ncmpcpp, terminal music player
-V,neofetch, sys info tool
-V,neovim, powerful text editor
-V,newsboat, terminal RSS
-V,network-manager-applet, applet for systray
-V,nodejs, NodeJs
-V,npm, NodeJs package manager
-V,noto-fonts, fonts
-V,noto-fonts-emoji, fonts
-V,ntfs-3g, ntfs filesystem
-V,ttf-dejavu,
-V,ttf-font-awesome,
-V,ttf-inconsolata,
-V,ttf-jetbrains-mono,
-V,ttf-linux-libertine,
-V,pavucontrol, UI audiocontrol for pulse
-V,pass, password manager
-V,picom, composite manager
-V,pulseaudio, pulseaudio
-V,pulseaudio-alsa, for pulseaudio to manage ALSA
-V,python-pywal, generates colors for X
-V,ranger, file manager wirtten in python
-V,rsync, great sync client
-V,sxhkd, simple X htokey daemon
-V,sxiv, image viewer
-V,simple-scan, scanner gui for sane
+M,maim, screenshot tool
+M,mpc, music player
+M,mpd, music player daemon
+M,mpv, media player
+M,msmtp, mail sender
+M,ncmpcpp, terminal music player
+M,neofetch, sys info tool
+M,neovim, powerful text editor
+M,newsboat, terminal RSS
+M,network-manager-applet, applet for systray
+M,nodejs, NodeJs
+M,npm, NodeJs package manager
+M,noto-fonts, fonts
+M,noto-fonts-emoji, fonts
+M,ntfs-3g, ntfs filesystem
+M,ttf-dejavu,
+M,ttf-font-awesome,
+M,ttf-inconsolata,
+M,ttf-jetbrains-mono,
+M,ttf-linux-libertine,
+M,pavucontrol, UI audiocontrol for pulse
+M,pass, password manager
+M,picom, composite manager
+M,pulseaudio, pulseaudio
+M,pulseaudio-alsa, for pulseaudio to manage ALSA
+M,python-pywal, generates colors for X
+M,ranger, file manager wirtten in python
+M,rsync, great sync client
+M,sxhkd, simple X htokey daemon
+M,sxiv, image viewer
+M,simple-scan, scanner gui for sane
 A,simple-mtpfs, android mount
-V,system-config-printer, printer config
-V,thunderbird, email client
-V,torbrowser-launcher, TOR
-V,transmission-cli, torrent cli
-V,unrar,
-V,unzip,
-V,unclutter, hides mouse
-V,w3m, terminal web-browser
-V,wmname, sets the root window name for running Java programs
-V,wget,
-V,sane, program for scanner
-V,xclip, clipboard tool
-V,xorg, X11
-V,xorg-xinit,
-V,xdg-utils,
-V,xwallpaper, walls for X
-V,youtube-dl, download vids and audio from YT
-V,zathura, minimalist pdf viewer
-V,zathura-djvu,
-V,zathura-pdf-mupdf,
-V,zsh, cool shell
+M,system-config-printer, printer config
+M,thunderbird, email client
+M,torbrowser-launcher, TOR
+M,transmission-cli, torrent cli
+M,unrar,
+M,unzip,
+M,unclutter, hides mouse
+M,w3m, terminal web-browser
+M,wmname, sets the root window name for running Java programs
+M,wget,
+M,sane, program for scanner
+M,xclip, clipboard tool
+M,xorg, X11
+M,xorg-xinit,
+M,xdg-utils,
+M,xwallpaper, walls for X
+M,youtube-dl, download vids and audio from YT
+M,zathura, minimalist pdf viewer
+M,zathura-djvu,
+M,zathura-pdf-mupdf,
+M,zsh, cool shell
