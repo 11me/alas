@@ -158,11 +158,14 @@ make_symlinks() {
      cd "/home/$username" || exit
      ln -sf "$dotfiles/.config" . && chown -R "$username:$group" ".config"
      ln -sf "$dotfiles/.local" . && chown -R "$username:$group" ".local"
-     ln -sf "$dotfiles/.zprofile" ".profile" && chown -R "$username:$group" ".profile"
+     ln -sf "$dotfiles/.profile" . && chown -R "$username:$group" ".profile"
      ln -sf "$dotfiles/.xinitrc" . && chown -R "$username:$group" ".xinitrc"
      ln -sf "$dotfiles/.xprofile" . && chown -R "$username:$group" ".xprofile"
      ln -sf "$dotfiles/.config/zsh/.zshrc" . && chown -R "$username:$group" ".zshrc"
      ln -sf "$dotfiles/.config/.tmux.conf" . && chown -R "$username:$group" ".tmux.conf"
+     ln -sf "$dotfiles/.bashrc" . && chown -R "$username:$group" ".bashrc"
+     ln -sf "$dotfiles/.bash_aliases" . && chown -R "$username:$group" ".bash_aliases"
+     ln -sf "$dotfiles/.bash_functions" . && chown -R "$username:$group" ".bash_functions"
 
 }
 
