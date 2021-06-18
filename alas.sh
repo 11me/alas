@@ -166,6 +166,7 @@ make_symlinks() {
      ln -sf "$dotfiles/.bashrc" . && chown -R "$username:$group" ".bashrc"
      ln -sf "$dotfiles/.bash_aliases" . && chown -R "$username:$group" ".bash_aliases"
      ln -sf "$dotfiles/.bash_functions" . && chown -R "$username:$group" ".bash_functions"
+     ln -sf "$dotfiles/.inputrc" . && chown -R "$username:$group" ".inputrc"
 
 }
 
