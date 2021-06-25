@@ -164,8 +164,6 @@ make_symlinks() {
      ln -sf "$dotfiles/.config/zsh/.zshrc" . && chown -R "$username:$group" ".zshrc"
      ln -sf "$dotfiles/.config/.tmux.conf" . && chown -R "$username:$group" ".tmux.conf"
      ln -sf "$dotfiles/.bashrc" . && chown -R "$username:$group" ".bashrc"
-     ln -sf "$dotfiles/.bash_aliases" . && chown -R "$username:$group" ".bash_aliases"
-     ln -sf "$dotfiles/.bash_functions" . && chown -R "$username:$group" ".bash_functions"
      ln -sf "$dotfiles/.inputrc" . && chown -R "$username:$group" ".inputrc"
 
 }
