@@ -157,6 +157,7 @@ make_symlinks() {
      echo "Almost done! Creating symlinks from dotfiles..."
      cd "/home/$username" || exit
      ln -sf "$dotfiles/.config" . && chown -R "$username:$group" ".config"
+     ln -sf "$dotfiles/.config/vim" ".vim" && chown -R "$username:$group" ".vim"
      ln -sf "$dotfiles/.local" . && chown -R "$username:$group" ".local"
      ln -sf "$dotfiles/.profile" . && chown -R "$username:$group" ".profile"
      ln -sf "$dotfiles/.xinitrc" . && chown -R "$username:$group" ".xinitrc"
