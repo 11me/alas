@@ -174,7 +174,7 @@ make_symlinks() {
 create_dirs() {
 
     mkdir -p "/home/$username/dox" && chown -R "$username:$group" "$_"
-    mkdir -p "/home/$username/dox/projects" && chown -R "$username:$group" "$_"
+    mkdir -p "/home/$username/dox/repos" && chown -R "$username:$group" "$_"
     mkdir -p "/home/$username/dox/personal" && chown -R "$username:$group" "$_"
     mkdir -p "/home/$username/dox/usb-mnt" && chown -R "$username:$group" "$_"
     mkdir -p "/home/$username/dwns" && chown -R "$username:$group" "$_"
