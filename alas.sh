@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # ArchLinux Autorising Script
 # Created by 11me
