@@ -2,7 +2,6 @@ TAG, NAME, DESCRIPTION
 M,alsa-utils, utils for alsa
 M,arandr, UI for xrandr for setup a monitor
 M,acpi, needed for batteries script
-M,alacritty, cool terminal
 A,artix-dark-theme-git, nice dark gtk2/3 theme
 M,blueman, UI for bluetooth (BT) manager
 M,bluez, daemon for BT protocol
@@ -21,6 +20,8 @@ M,hplip, drivers for HP
 A,hplip-plugin,
 M,htop, process viewer
 M,ipython, interactive python shell
+M,i3-wm, i3 window manager
+M,i3blocks, statusbar
 M,isync, sync email
 A,lf, file manager
 M,lynx, terminal browser
@@ -39,8 +40,6 @@ M,neofetch, sys info tool
 M,neovim, powerful text editor
 M,newsboat, terminal RSS
 M,network-manager-applet, applet for systray
-M,nodejs, NodeJs
-M,npm, NodeJs package manager
 M,noto-fonts, fonts
 M,noto-fonts-emoji, fonts
 M,ntfs-3g, ntfs filesystem
@@ -55,7 +54,6 @@ M,picom, composite manager
 M,pulseaudio, pulseaudio
 M,pulseaudio-alsa, for pulseaudio to manage ALSA
 M,python-pywal, generates colors for X
-M,ranger, file manager wirtten in python
 M,rsync, great sync client
 M,sxhkd, simple X htokey daemon
 M,sxiv, image viewer
@@ -81,4 +79,3 @@ M,youtube-dl, download vids and audio from YT
 M,zathura, minimalist pdf viewer
 M,zathura-djvu,
 M,zathura-pdf-mupdf,
-M,zsh, cool shell
